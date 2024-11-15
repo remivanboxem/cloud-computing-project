@@ -160,3 +160,34 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+# Node.js modules
+node_modules/
+
+# npm cache
+.npm/
+
+# Yarn cache
+.yarn/
+.pnp.*
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Terraform plan files
+*.tfplan
+
+# Local Terraform files
+.terraform/
+.terraform.lock.hcl
+
+# Sensitive files
+*.tfvars
+*.tfvars.json
+
+# GitHub Actions
+*.workflow.temp
