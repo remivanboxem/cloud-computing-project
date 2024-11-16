@@ -5,9 +5,11 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ghcr.io/remivanboxem/cloud-computing-project
 
     steps:
+
+      - name: Install uv
+        uses: apt update && apt install uv -y
     
       - name: Checkout repository
         uses: actions/checkout@v3
