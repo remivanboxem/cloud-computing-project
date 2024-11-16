@@ -1,0 +1,22 @@
+name: Execute tests
+on: [push]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: remivanboxem/cloud-computing-project
+
+    steps:
+    
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Python installation
+        run: uv python install
+
+      - name: Install dependencies and create virtual env
+        run: uv sync
+
+      - name: Run tests
+        run: uv run pytest $GITHUB_WORKSPACE/tests/
